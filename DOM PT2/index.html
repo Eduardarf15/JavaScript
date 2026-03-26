@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AULA DOM pt.2</title>
+    <style>
+        body{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif, 'Times New Roman', Times, serif;
+    background-color: black;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+}
+
+.container{
+    padding:20px;
+    border-radius: 15px;
+    background-color: pink;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    gap: 10px; 
+    width: 300px;
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.3);
+}
+.soma{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+input{
+    padding: 8px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+}
+input[type="button"]{
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+input[type="button"]:hover{
+    background-color: #333;
+}
+    </style>
+</head>
+<!--Somando dois números com js-->
+<body>
+    <div class="container">
+    <h1>Somando Valores</h1>
+<div class="soma">
+    <input type="number" name="txtn1" id="txtn1"> +
+    <input type="number" name="txtn2" id="txtn2">
+    <input type="button" value="somar" onclick="somar()">
+    <div id="res">Resultado: </div>
+</div>
+    <script>
+        function somar(){
+            var tn1 = window.document.getElementById('txtn1')
+            var tn2 =  window.document.getElementById('txtn2')
+            var res = window.document.getElementById('res')
+            var n1 = Number(tn1.value)
+            var n2 = Number(tn2.value)
+            var s = n1 + n2;
+            res.innerHTML = `a soma entre ${n1} e ${n2} é ${s}`
+
+        }
+    </script>
+    </div>
+</body>
+</html>

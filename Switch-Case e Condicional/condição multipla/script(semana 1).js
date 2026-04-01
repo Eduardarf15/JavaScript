@@ -11,7 +11,7 @@ let idade = 18;
 let resultado = (idade >= 18) ? 'Maior de idade' : 'Menor de idade';
 console.log(resultado);
 
-//Condicional Switch-Case
+//Condicional Switch-Case (SEMANA 1)
 
 switch(new Date().getDay()){
         case 0:
